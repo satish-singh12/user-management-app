@@ -1,11 +1,15 @@
+import React from "react";
 import "./App.css";
+import Dashboard from "./pages/Dashboard";
+import { Toaster } from "react-hot-toast";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <h1>Users Managment App</h1>
-    </div>
+    <>
+      <Toaster />
+      <Dashboard />
+    </>
   );
-}
+};
 
 export default App;
