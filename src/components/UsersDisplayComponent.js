@@ -7,6 +7,7 @@ const UsersDisplayComponent = ({
   setUsers,
   setFormData,
   setIsEditing,
+  currentUsers,
 }) => {
   // Fetch users from the API
   const fetchUsers = async () => {
@@ -54,7 +55,7 @@ const UsersDisplayComponent = ({
           </tr>
         </thead>
         <tbody>
-          {users.map((user) => (
+          {currentUsers?.map((user) => (
             <tr key={user.id}>
               <td>{user.id}</td>
               <td>{user.firstName || user.name.split(" ")[0]}</td>

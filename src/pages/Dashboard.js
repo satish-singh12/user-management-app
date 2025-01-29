@@ -1,6 +1,7 @@
 import { useState } from "react";
 import UsersDisplayComponent from "../components/UsersDisplayComponent";
 import UserInputComponent from "../components/UserInputComponent";
+import PaginationComponent from "../components/PaginationComponent";
 
 const Dashboard = () => {
   const [users, setUsers] = useState([]);
@@ -12,6 +13,12 @@ const Dashboard = () => {
     department: "",
   });
   const [isEditing, setIsEditing] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [usersPerPage] = useState(5);
+
+  const indexOfLastUser = currentPage * usersPerPage;
+  const indexOfFirstUser = indexOfLastUser - usersPerPage;
+  const currentUsers = users.slice(indexOfFirstUser, indexOfLastUser);
 
   return (
     <div className="container">
@@ -33,6 +40,15 @@ const Dashboard = () => {
         setUsers={setUsers}
         setFormData={setFormData}
         setIsEditing={setIsEditing}
+        currentUsers={currentUsers}
+      />
+
+      {/* Pagination */}
+      <PaginationComponent
+        users={users}
+        usersPerPage={usersPerPage}
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
       />
     </div>
   );

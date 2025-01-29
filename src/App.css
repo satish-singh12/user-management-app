@@ -140,3 +140,21 @@ body {
     background-color: #0056b3;
   }
   
+  .pagination {
+    display: flex;
+    margin: 3px;
+    justify-content: right;
+    gap: 5px;
+  }
+  .page-button {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background: #f2f2f2;
+    cursor: pointer;
+  }
+  .page-button.active {
+    background: #007bff;
+    color: #fff;
+    border-color: #007bff;
+  }
+  

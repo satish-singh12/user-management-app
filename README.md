@@ -22,7 +22,7 @@ The User Management App is a simple React-based application that allows users to
     - [`npm test`](#npm-test)
     - [`npm run build`](#npm-run-build)
     - [`npm run eject`](#npm-run-eject)
-- [Deployment](#deployment)
+  - [Deployment](#deployment)
   - [License](#license)
 
 ---
@@ -76,17 +76,17 @@ frontend/
    cd user-management-app
    ```
 2. Install dependencies:
-```bash
-npm install
-```
+   ```bash
+   npm install
+   ```
 3. Start the development server:
-```bash
-npm start
-```
+   ```bash
+   npm start
+   ```
 4. Open the app in your browser at:
-```bash
-http://localhost:3000
-```
+   ```bash
+   http://localhost:3000
+   ```
 
 # API Integration
 
@@ -136,7 +136,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-# Deployment
+## Deployment
 
 To deploy the app, you can build it and host it using a static site service like Vercel, Netlify, or GitHub Pages:
 
