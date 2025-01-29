@@ -1,8 +1,111 @@
-# Getting Started with Create React App
+
+# Application for User Dashboard Management
+
+The User Management App is a simple React-based application that allows users to add, edit, delete, and view users with pagination support. It is built using modern React features and uses a mock API for handling user data.
+
+---
+
+## Table of Contents
+
+- [Application for User Dashboard Management](#application-for-user-dashboard-management)
+  - [Table of Contents](#table-of-contents)
+  - [Getting Started](#getting-started)
+    - [Features](#features)
+    - [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Installation \& Setup](#installation--setup)
+- [API Integration](#api-integration)
+    - [API Functions (Located in utils/fetchDataApi.js)](#api-functions-located-in-utilsfetchdataapijs)
+- [Available Scripts](#available-scripts)
+  - [Getting Started with Create React App](#getting-started-with-create-react-app)
+    - [`npm start`](#npm-start)
+    - [`npm test`](#npm-test)
+    - [`npm run build`](#npm-run-build)
+    - [`npm run eject`](#npm-run-eject)
+- [Deployment](#deployment)
+  - [License](#license)
+
+---
+
+## Getting Started
+
+### Features
+- Add new users with first name, last name, email, and department.
+- Edit existing user details.
+- Delete users from the list.
+- Paginated user display.
+- Form validation with error handling.
+- Notifications using react-hot-toast.
+- Responsive UI for better usability on different devices.
+
+### Tech Stack
+- **Frontend**: React 19, React Hooks
+- **Styling**: CSS
+- **API Calls**: Axios
+- **Notifications**: react-hot-toast
+
+# Project Structure
+
+```
+frontend/
+│-- src/
+│   ├── components/
+│   │   ├── UserInputComponent.js
+│   │   ├── UsersDisplayComponent.js
+│   │   ├── PaginationComponent.js
+│   ├── pages/
+│   │   ├── Dashboard.js
+│   ├── utils/
+│   │   ├── fetchDataApi.js
+│   ├── App.js
+│   ├── App.css
+│   ├── index.js
+│   ├── reportWebVitals.js
+│-- package.json
+│-- README.md
+
+```
+
+---
+
+# Installation & Setup
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/user-management-app.git
+   cd user-management-app
+   ```
+2. Install dependencies:
+```bash
+npm install
+```
+3. Start the development server:
+```bash
+npm start
+```
+4. Open the app in your browser at:
+```bash
+http://localhost:3000
+```
+
+# API Integration
+
+This app uses a mock API from https://jsonplaceholder.typicode.com/users to fetch, add, update, and delete users.
+
+### API Functions (Located in utils/fetchDataApi.js)
+
+```bash
+export const getDataApi = () => apiCall("get", baseURL);
+export const postDataApi = (formData) => apiCall("post", baseURL, formData);
+export const putDataApi = (formData) => apiCall("put", `${baseURL}/${formData.id}`, formData);
+export const deleteDataApi = (id) => apiCall("delete", `${baseURL}/${id}`);
+```
+
+# Available Scripts
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
 
 In the project directory, you can run:
 
@@ -33,38 +136,21 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Deployment
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+To deploy the app, you can build it and host it using a static site service like Vercel, Netlify, or GitHub Pages:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm run build
+```
 
-## Learn More
+Then upload the build/ directory to your hosting provider.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## License
 
-### Code Splitting
+This project is licensed under the ISC License.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Author**: Sateesh Singh
