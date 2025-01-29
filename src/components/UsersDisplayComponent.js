@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import toast from "react-hot-toast";
-import { getDataApi } from "../utils/fetchDataApi";
+import { deleteDataApi, getDataApi } from "../utils/fetchDataApi";
 
 const UsersDisplayComponent = ({
   users,
@@ -39,7 +39,21 @@ const UsersDisplayComponent = ({
     setIsEditing(true);
   };
 
-  const handleDeleteUser = async (id) => {};
+  // Delete a user
+  const handleDeleteUser = async (id) => {
+    if (!window.confirm("Are you sure you want to delete this user?")) return;
+    try {
+      const response = await deleteDataApi(id);
+      if (response.status === 200) {
+        setUsers(users.filter((user) => user.id !== id));
+        toast.success("User deleted successfully.");
+      } else {
+        toast.error("Failed to delete user. Please try again.");
+      }
+    } catch (err) {
+      toast.error("Failed to delete user. Please try again.");
+    }
+  };
 
   return (
     <>
