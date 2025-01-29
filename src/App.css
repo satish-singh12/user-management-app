@@ -158,3 +158,95 @@ body {
     border-color: #007bff;
   }
   
+  /* Responsive style */
+@media (max-width: 768px) {
+  .container {
+    min-width: 550px;
+    margin: 2rem auto;
+    padding: 10px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .user-table {
+    font-size: 12px;
+    overflow-x: auto;
+  }
+
+  .submit-button {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .edit-button,
+  .delete-button {
+    margin-bottom: 3px;
+    width: 100%;
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .page-button {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    background: #f2f2f2;
+    cursor: pointer;
+  }
+
+  .page-button.active {
+    background: #007bff;
+    color: #fff;
+    border-color: #007bff;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-title {
+    width: 80%;
+    font-size: 18px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .user-table {
+    font-size: 10px;
+    overflow-x: auto;
+  }
+
+  .submit-button {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .edit-button,
+  .delete-button {
+    width: 100%;
+    padding: 2px 3px;
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .page-button {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .page-button.active {
+    background: #007bff;
+    color: #fff;
+    border-color: #007bff;
+  }
+}
