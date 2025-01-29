@@ -11,9 +11,9 @@ The User Management App is a simple React-based application that allows users to
   - [Table of Contents](#table-of-contents)
   - [Getting Started](#getting-started)
     - [Features](#features)
+  - [Development Setup](#development-setup)
     - [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
-- [Installation \& Setup](#installation--setup)
+    - [DevDependencies](#devdependencies)
 - [API Integration](#api-integration)
     - [API Functions (Located in utils/fetchDataApi.js)](#api-functions-located-in-utilsfetchdataapijs)
 - [Available Scripts](#available-scripts)
@@ -35,14 +35,34 @@ The User Management App is a simple React-based application that allows users to
 - Delete users from the list.
 - Paginated user display.
 - Form validation with error handling.
+- Testing Setup: Jest testing configuration, tests for PaginationComponent, UserInputComponent, and UsersDisplayComponent
 - Notifications using react-hot-toast.
 - Responsive UI for better usability on different devices.
 
+## Development Setup
+
 ### Tech Stack
 - **Frontend**: React 19, React Hooks
-- **Styling**: CSS
+- **Styling**: CSS3
 - **API Calls**: Axios
 - **Notifications**: react-hot-toast
+
+### DevDependencies
+
+The following development dependencies are used in this project for setting up Babel, Jest, and Testing Libraries:
+
+```json
+"devDependencies": {
+  "@babel/core": "^7.26.7",
+  "@babel/preset-env": "^7.26.7",
+  "@babel/preset-react": "^7.26.3",
+  "@testing-library/jest-dom": "^6.6.3",
+  "@testing-library/react": "^16.2.0",
+  "@testing-library/user-event": "^14.6.1",
+  "babel-jest": "^29.7.0",
+  "identity-obj-proxy": "^3.0.0",
+  "jest": "^27.5.1"
+}
 
 # Project Structure
 
@@ -53,6 +73,10 @@ frontend/
 │   │   ├── UserInputComponent.js
 │   │   ├── UsersDisplayComponent.js
 │   │   ├── PaginationComponent.js
+│   │   └── /__tests__
+│   │       ├── UserInputComponent.test.js
+│   │       ├── UsersDisplayComponent.test.js
+│   │       └── PaginationComponent.test.js
 │   ├── pages/
 │   │   ├── Dashboard.js
 │   ├── utils/
@@ -61,8 +85,11 @@ frontend/
 │   ├── App.css
 │   ├── index.js
 │   ├── reportWebVitals.js
-│-- package.json
+├── babel.config.js
+├── jest.config.js
+├── package.json
 │-- README.md
+│-- setupTests.js
 
 ```
 
@@ -72,7 +99,7 @@ frontend/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/user-management-app.git
+   git clone https://github.com/satish-singh12/user-management-app.git
    cd user-management-app
    ```
 2. Install dependencies:
