@@ -2,7 +2,12 @@ import { useEffect } from "react";
 import toast from "react-hot-toast";
 import { getDataApi } from "../utils/fetchDataApi";
 
-const UsersDisplayComponent = ({ users, setUsers }) => {
+const UsersDisplayComponent = ({
+  users,
+  setUsers,
+  setFormData,
+  setIsEditing,
+}) => {
   // Fetch users from the API
   const fetchUsers = async () => {
     try {
@@ -17,6 +22,24 @@ const UsersDisplayComponent = ({ users, setUsers }) => {
     fetchUsers();
     // eslint-disable-next-line
   }, []);
+
+  // Edit an existing user
+  const handleEditUser = (user) => {
+    const [firstName = "", lastName = ""] = user.name
+      ? user.name.split(" ")
+      : [user.firstName, user.lastName];
+    setFormData({
+      id: user.id,
+      firstName,
+      lastName,
+      email: user.email || "",
+      department: user.department || "NA",
+    });
+    setIsEditing(true);
+  };
+
+  const handleDeleteUser = async (id) => {};
+
   return (
     <>
       <table className="user-table">
@@ -39,8 +62,18 @@ const UsersDisplayComponent = ({ users, setUsers }) => {
               <td>{user.email || "N/A"}</td>
               <td>{user.department || "N/A"}</td>
               <td>
-                <button className="edit-button">Edit</button>
-                <button className="delete-button">Delete</button>
+                <button
+                  className="edit-button"
+                  onClick={() => handleEditUser(user)}
+                >
+                  Edit
+                </button>
+                <button
+                  className="delete-button"
+                  onClick={() => handleDeleteUser(user.id)}
+                >
+                  Delete
+                </button>
               </td>
             </tr>
           ))}
