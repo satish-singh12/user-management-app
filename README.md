@@ -14,6 +14,8 @@ The User Management App is a simple React-based application that allows users to
   - [Development Setup](#development-setup)
     - [Tech Stack](#tech-stack)
     - [DevDependencies](#devdependencies)
+  - [Project Structure](#project-structure)
+- [Installation \& Setup](#installation--setup)
 - [API Integration](#api-integration)
     - [API Functions (Located in utils/fetchDataApi.js)](#api-functions-located-in-utilsfetchdataapijs)
 - [Available Scripts](#available-scripts)
@@ -63,35 +65,34 @@ The following development dependencies are used in this project for setting up B
   "identity-obj-proxy": "^3.0.0",
   "jest": "^27.5.1"
 }
-
-# Project Structure
-
 ```
-user-management-app/
-├── src/
-│   ├── components/
-│   │   ├── UserInputComponent.js
-│   │   ├── UsersDisplayComponent.js
-│   │   ├── PaginationComponent.js
-│   │   └── __tests__/
-│   │       ├── UserInputComponent.test.js
-│   │       ├── UsersDisplayComponent.test.js
-│   │       └── PaginationComponent.test.js
-│   ├── pages/
-│   │   └── Dashboard.js
-│   ├── utils/
-│   │   └── fetchDataApi.js
-│   ├── App.js
-│   ├── App.css
-│   ├── index.js
-│   └── reportWebVitals.js
-├── babel.config.js
-├── jest.config.js
-├── package.json
-├── README.md
-└── setupTests.js
 
-```
+## Project Structure
+  ```bash
+  user-management-app/
+  ├── src/
+  │   ├── components/
+  │   │   ├── UserInputComponent.js
+  │   │   ├── UsersDisplayComponent.js
+  │   │   ├── PaginationComponent.js
+  │   │   └── __tests__/
+  │   │       ├── UserInputComponent.test.js
+  │   │       ├── UsersDisplayComponent.test.js
+  │   │       └── PaginationComponent.test.js
+  │   ├── pages/
+  │   │   └── Dashboard.js
+  │   ├── utils/
+  │   │   └── fetchDataApi.js
+  │   ├── App.js
+  │   ├── App.css
+  │   ├── index.js
+  │   └── reportWebVitals.js
+  ├── babel.config.js
+  ├── jest.config.js
+  ├── package.json
+  ├── README.md
+  └── setupTests.js
+  ```
 
 ---
 
