@@ -67,29 +67,29 @@ The following development dependencies are used in this project for setting up B
 # Project Structure
 
 ```
-frontend/
-│-- src/
+user-management-app/
+├── src/
 │   ├── components/
 │   │   ├── UserInputComponent.js
 │   │   ├── UsersDisplayComponent.js
 │   │   ├── PaginationComponent.js
-│   │   └── /__tests__
+│   │   └── __tests__/
 │   │       ├── UserInputComponent.test.js
 │   │       ├── UsersDisplayComponent.test.js
 │   │       └── PaginationComponent.test.js
 │   ├── pages/
-│   │   ├── Dashboard.js
+│   │   └── Dashboard.js
 │   ├── utils/
-│   │   ├── fetchDataApi.js
+│   │   └── fetchDataApi.js
 │   ├── App.js
 │   ├── App.css
 │   ├── index.js
-│   ├── reportWebVitals.js
+│   └── reportWebVitals.js
 ├── babel.config.js
 ├── jest.config.js
 ├── package.json
-│-- README.md
-│-- setupTests.js
+├── README.md
+└── setupTests.js
 
 ```
 
