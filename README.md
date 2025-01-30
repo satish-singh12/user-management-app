@@ -44,7 +44,7 @@ The User Management App is a simple React-based application that allows users to
 ## Development Setup
 
 ### Tech Stack
-- **Frontend**: React 19, React Hooks
+- **Frontend**: React 18, React Hooks
 - **Styling**: CSS3
 - **API Calls**: Axios
 - **Notifications**: react-hot-toast
